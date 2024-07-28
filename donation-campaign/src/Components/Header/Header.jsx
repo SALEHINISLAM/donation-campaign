@@ -55,7 +55,7 @@ const Header = (props) => {
   );
   return (
     <>
-      <div className="container mx-auto absolute border flex justify-between lg:justify-around w-full p-2 flex-row items-center inset-x-0 top-0">
+      <div className="container mx-auto absolute flex justify-between w-full p-2 flex-row items-center inset-x-0 top-0">
         <div className="">
           <a className="btn btn-ghost min-w-fit min-h-fit sm:h-16">
             <img
@@ -66,7 +66,7 @@ const Header = (props) => {
           </a>
         </div>
         <div className="flex-none hidden md:flex">
-          <ul className="flex flex-row gap-4 font-semibold text-lg px-1 text-black bg-white">{links}</ul>
+          <ul className="flex flex-row gap-6 lg:gap-12 xl:gap-16 font-semibold text-lg px-1 text-black bg-white">{links}</ul>
         </div>
         <div className="md:hidden">
           <div className="dropdown">
@@ -93,7 +93,7 @@ const Header = (props) => {
       <div className="flex justify-center items-center">
       <ul
         tabIndex={0}
-        className={dropdown ? "flex flex-col duration-200 justify-center items-center w-1/2 border rounded-xl shadow-lg" : "hidden"}
+        className={dropdown ? "flex flex-col duration-200 justify-center items-center w-1/2 border rounded-xl shadow-lg top-20 fixed bg-white" : "hidden"}
       >
         {links}
       </ul>
