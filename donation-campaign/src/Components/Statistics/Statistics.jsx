@@ -7,12 +7,7 @@ import { PieChart, ResponsiveContainer, Cell, Pie, Tooltip, Legend } from "recha
 const Statistics = (props) => {
   const donations = useLoaderData();
   const [donated, setDonated] = useState([]);
-  let totalDonationAmount = 0;
-  for (let index = 0; index < donations.length; index++) {
-    const element = donations[index].price;
-    totalDonationAmount += parseInt(element);
-  }
-  const [donatedMoney, setDonatedMoney] = useState(0);
+  let totalDonationAmount = 12;
   useEffect(() => {
     const madeDonation = getDonation();
     if (madeDonation.length > 0) {
@@ -26,17 +21,11 @@ const Statistics = (props) => {
         }
       }
       setDonated(myDonations);
-      let myDonationAmount = 0;
-      for (let index = 0; index < donated.length; index++) {
-        const element = donated[index].price;
-        myDonationAmount += parseInt(element);
-      }
-      setDonatedMoney(myDonationAmount);
     }
-  }, [donations, donated]);
+  }, [donations]);
 
   const data = [
-    { name: "Your Donation", value: donatedMoney },
+    { name: "Your Donation", value: donated.length },
     { name: "Total Donation", value: totalDonationAmount },
   ];
   const COLORS = ["#00C49F", "#FF444A"];
