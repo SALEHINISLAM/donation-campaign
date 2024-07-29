@@ -66,7 +66,9 @@ const Header = (props) => {
           </a>
         </div>
         <div className="flex-none hidden md:flex">
-          <ul className="flex flex-row gap-6 lg:gap-12 xl:gap-16 font-semibold text-lg px-1 text-black bg-white">{links}</ul>
+          <ul className="flex flex-row gap-6 lg:gap-12 xl:gap-16 font-semibold text-lg px-1 text-black bg-transparent">
+            {links}
+          </ul>
         </div>
         <div className="md:hidden">
           <div className="dropdown">
@@ -91,14 +93,17 @@ const Header = (props) => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-      <ul
-        tabIndex={0}
-        className={dropdown ? "flex flex-col duration-200 justify-center items-center w-1/2 border rounded-xl shadow-lg top-20 fixed bg-white" : "hidden"}
-      >
-        {links}
-      </ul>
+        <ul
+          tabIndex={0}
+          className={
+            dropdown
+              ? "flex flex-col duration-200 justify-center items-center w-1/2 border rounded-xl shadow-lg top-20 fixed bg-white"
+              : "hidden"
+          }
+        >
+          {links}
+        </ul>
       </div>
-
     </>
   );
 };

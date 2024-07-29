@@ -6,15 +6,19 @@ import "./index.css";
 import Home from "./Components/Home/Home.jsx";
 import Statistics from "./Components/Statistics/Statistics.jsx";
 import Donation from "./Components/Donation/Donation.jsx";
+import DonationDetails from "./Components/DonationDetails/DonationDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{ path: "/", element: <Home /> }, { path: "/donation",
-      element:<Donation/>,
-     },
-      {path:'/stat',
-        element:<Statistics/>
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/donation", element: <Donation />, loader: ()=>fetch("/card.json") },
+      { path: "/stat", element: <Statistics /> },
+      {
+        path:'/donation/:id',
+        element:<DonationDetails/>,
+        loader:()=>fetch('/card.json'),
       }
     ],
   },
