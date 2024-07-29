@@ -1,12 +1,7 @@
-# donation-campaign
+Features:
+1. Here you can search your preferred donation by search option.
+2. You can see donation details by clicking each donation
+3. you can donate
+4. you can compare total required donations and your given donation from statistics page.
 
-## Private Repo Link
-
-[Click here for the private repo](https://classroom.github.com/a/ymFUnXH9)
-
-
-
-##  Questions
-Add Readme.md file and will have the following: 
-
-- Add at least 3 Project features 
+Visit the live site: https://donation-campaign-virid.vercel.app/

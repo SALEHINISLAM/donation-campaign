@@ -57,7 +57,7 @@ const Header = (props) => {
     <>
       <div className="container mx-auto absolute flex justify-between w-full p-2 flex-row items-center inset-x-0 top-0">
         <div className="">
-          <a className="btn btn-ghost min-w-fit min-h-fit sm:h-16">
+          <a className="btn btn-ghost min-w-fit min-h-fit sm:h-16" href="/">
             <img
               src="https://imagizer.imageshack.com/img924/3084/Azh5q2.png"
               alt=""

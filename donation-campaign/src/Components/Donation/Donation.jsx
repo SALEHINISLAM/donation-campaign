@@ -10,7 +10,7 @@ const Donation = (props) => {
     setDataLength(cards.length)
   }
   return (
-    <div className="">
+    <div className="min-h-screen">
       <div className="container mx-auto p-1  pt-28 lg:pt-36 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
         {cards.slice(0, dataLength).map((card) => (
           <DonationCard key={card.id} card={card} />
