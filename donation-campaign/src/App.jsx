@@ -4,13 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Header from './Components/Header/Header'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
     <div className="bg-white">
+    <ToastContainer />
     <Header/>
     <Outlet/>
     </div>
